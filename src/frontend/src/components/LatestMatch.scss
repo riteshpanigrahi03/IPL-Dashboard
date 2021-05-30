@@ -1,0 +1,17 @@
+.LatestMatch{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    .match_date,.match_venue,.match_result{
+        margin: 10px;
+    }
+
+}
+.additional_detail{
+    justify-self: right;
+    & > p{
+        margin-bottom: 15px;
+    }
+}
