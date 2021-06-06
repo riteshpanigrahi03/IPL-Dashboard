@@ -25,7 +25,6 @@ public class TeamController {
     public Team getTeam(@PathVariable String teamName){
         Team team =  teamRepo.findByTeamName(teamName);
         team.setMatches(matchRepo.findMatchedsByTeam(teamName,4));
-
         return team;
     }
 
