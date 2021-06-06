@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.Query;
 public interface TeamRepo extends JpaRepository<Team,Long> {
 
     Team findByTeamName(String teamName);
+
 }

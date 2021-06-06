@@ -5,10 +5,8 @@ import com.backend.ipldashboard.model.Team;
 import com.backend.ipldashboard.repo.MatchRepo;
 import com.backend.ipldashboard.repo.TeamRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Pageable;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -21,6 +19,10 @@ public class TeamController {
     @Autowired
     MatchRepo matchRepo;
 
+    @GetMapping("/teams")
+    public List<Team> getAllTeamName(){
+        return teamRepo.findAll();
+    }
     @GetMapping("/team/{teamName}")
     public Team getTeam(@PathVariable String teamName){
         Team team =  teamRepo.findByTeamName(teamName);
